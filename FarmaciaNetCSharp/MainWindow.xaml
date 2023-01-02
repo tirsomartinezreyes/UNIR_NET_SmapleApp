@@ -1,12 +1,56 @@
 ﻿<Window x:Class="FarmaciaNetCSharp.MainWindow"
+        x:Name="Pedido"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FarmaciaNetCSharp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="UNIR - Desarrollo de aplicaciones en .NET" Height="300" Width="600">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
 
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Label Content="Nombre del Medicamento" Grid.Row="0" Grid.Column="0"/>
+        <Label Content="Tipo de Medicamento"  Grid.Row="1" Grid.Column="0" />
+        <Label Content="Cantidad de Medicamento"  Grid.Row="2" Grid.Column="0"/>
+        <Label Content="Nombre del Distribuidor" Grid.Row="3" Grid.Column="0"/>
+        <Label Content="Sucursal de entrega" Grid.Row="4" Grid.Column="0"/>
+        <Label Content="" Grid.Row="6" Grid.Column="0" />
+
+        <TextBox x:Name="medicamentoNombre"  Grid.Row="0" Grid.Column="1" Width="250" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <ComboBox   x:Name="medicamentoTipo" Grid.Row="1" Grid.Column="1" Width="250" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <ComboBoxItem>Analgésico</ComboBoxItem>
+            <ComboBoxItem>Analéptico</ComboBoxItem>
+            <ComboBoxItem>Anestésico</ComboBoxItem>
+            <ComboBoxItem>Antiácido</ComboBoxItem>
+            <ComboBoxItem>Antidepresivo</ComboBoxItem>
+            <ComboBoxItem>Antibiótico</ComboBoxItem>
+        </ComboBox>
+        <TextBox x:Name="medicamentoCantidad"  Grid.Row="2" Grid.Column="1" Width="50" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <StackPanel  Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5">
+            <RadioButton x:Name="medicamentoDistribuidor1">Cofamra</RadioButton>
+            <RadioButton x:Name="medicamentoDistribuidor2">Empsephar</RadioButton>
+            <RadioButton x:Name="medicamentoDistribuidor3">Cemefar</RadioButton>
+        </StackPanel>
+        <StackPanel  Grid.Row="4" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5">
+            <CheckBox x:Name="medicamentoEntregaPrincipal">Sucursal Principal</CheckBox>
+            <CheckBox x:Name="medicamentoEntregaSecundaria1">Sucursal Secundaria</CheckBox>
+        </StackPanel>
+        <Button x:Name="medicamentoConfirmar" Grid.Row="6" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5" Background="#FF05521F" Foreground="#FFFDFDFD" Padding="5">Confirmar</Button>
+        <Button x:Name="medicamentoBorrar" Grid.Row="6" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5" Background="#FFAF1414" Foreground="#FFF9F9F9" Padding="5">Borrar</Button>
+        <Label x:Name="medicamentoValidacion" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Content="errores" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFDE1414"/>
     </Grid>
 </Window>
