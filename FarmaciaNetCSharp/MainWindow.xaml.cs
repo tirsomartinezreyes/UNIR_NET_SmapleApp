@@ -24,5 +24,19 @@ namespace FarmaciaNetCSharp
         {
             InitializeComponent();
         }
+
+        private void ButtonBorrar_Click(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Trace.WriteLine("on Borrar");
+            medicamentoNombre.Text = "";
+            medicamentoTipo.SelectedIndex = 0;
+            medicamentoCantidad.Text = "0";
+            medicamentoDistribuidor1.IsChecked = false;
+            medicamentoDistribuidor2.IsChecked = false;
+            medicamentoDistribuidor3.IsChecked = false;
+            medicamentoEntregaPrincipal.IsChecked = false;
+            medicamentoEntregaSecundaria1.IsChecked = false;
+            medicamentoValidacion.Content = "";
+        }
     }
 }
