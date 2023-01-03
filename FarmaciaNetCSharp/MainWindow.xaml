@@ -47,10 +47,10 @@
         </StackPanel>
         <StackPanel  Grid.Row="4" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5">
             <CheckBox x:Name="medicamentoEntregaPrincipal">Sucursal Principal</CheckBox>
-            <CheckBox x:Name="medicamentoEntregaSecundaria1">Sucursal Secundaria</CheckBox>
+            <CheckBox x:Name="medicamentoEntregaSecundaria">Sucursal Secundaria</CheckBox>
         </StackPanel>
-        <Button x:Name="medicamentoConfirmar" Grid.Row="6" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5" Background="#FF05521F" Foreground="#FFFDFDFD" Padding="5">Confirmar</Button>
+        <Button x:Name="medicamentoConfirmar" Grid.Row="6" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5" Background="#FF05521F" Foreground="#FFFDFDFD" Padding="5" Click="ButtonConfirmar_Click">Confirmar</Button>
         <Button x:Name="medicamentoBorrar" Grid.Row="6" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5" Background="#FFAF1414" Foreground="#FFF9F9F9" Padding="5" Click="ButtonBorrar_Click">Borrar</Button>
-        <Label x:Name="medicamentoValidacion" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Content="" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFDE1414"/>
+        <Label x:Name="medicamentoValidacion" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Content="sdfsds" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFDE1414"/>
     </Grid>
 </Window>
