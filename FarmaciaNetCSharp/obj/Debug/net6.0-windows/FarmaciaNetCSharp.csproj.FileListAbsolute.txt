@@ -19,3 +19,5 @@ C:\Users\Tirso\source\repos\UNIR_NET_SmapleApp\FarmaciaNetCSharp\obj\Debug\net6.
 C:\Users\Tirso\source\repos\UNIR_NET_SmapleApp\FarmaciaNetCSharp\obj\Debug\net6.0-windows\FarmaciaNetCSharp.pdb
 C:\Users\Tirso\source\repos\UNIR_NET_SmapleApp\FarmaciaNetCSharp\obj\Debug\net6.0-windows\FarmaciaNetCSharp.genruntimeconfig.cache
 C:\Users\Tirso\source\repos\UNIR_NET_SmapleApp\FarmaciaNetCSharp\obj\Debug\net6.0-windows\ref\FarmaciaNetCSharp.dll
+C:\Users\Tirso\source\repos\UNIR_NET_SmapleApp\FarmaciaNetCSharp\obj\Debug\net6.0-windows\Window1.g.cs
+C:\Users\Tirso\source\repos\UNIR_NET_SmapleApp\FarmaciaNetCSharp\obj\Debug\net6.0-windows\Window1.baml

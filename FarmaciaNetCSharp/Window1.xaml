@@ -1,0 +1,25 @@
+﻿<Window x:Class="FarmaciaNetCSharp.Window1"
+        x:Name="Pedido"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FarmaciaNetCSharp"
+        mc:Ignorable="d"
+        Title="Resumen del pedido" Height="300" Width="600">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Label x:Name="pedidoResumenTexto" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Content="" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Label x:Name="pedidoResumenDireccion" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Content="" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Button x:Name="pedidoEnviar" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5" Background="#FF05521F" Foreground="#FFFDFDFD" Padding="5" Click="ButtonEnviar_Click">Enviar</Button>
+        <Button x:Name="pedidoCancelar" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5" Background="#FFAF1414" Foreground="#FFF9F9F9" Padding="5" Click="ButtonCancelar_Click">Cancelar</Button>
+    </Grid>
+</Window>

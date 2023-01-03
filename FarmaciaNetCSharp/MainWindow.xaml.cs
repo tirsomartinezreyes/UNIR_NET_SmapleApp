@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Text.RegularExpressions;
 using System.Threading;
+using System.Net;
 
 namespace FarmaciaNetCSharp
 {
@@ -46,7 +47,24 @@ namespace FarmaciaNetCSharp
             limpiarMensajeDeError();
             if (validar())
             {
+                
 
+                string titulo = "Pedido al distribuidor " + getDistribuidor();
+                string texto = medicamentoCantidad.Text + " unidades del " + getTipoMedicamento() + " " + medicamentoNombre.Text;
+                string direccion = (getDestino());
+
+                System.Diagnostics.Trace.WriteLine(titulo);
+                System.Diagnostics.Trace.WriteLine(texto);
+                System.Diagnostics.Trace.WriteLine(direccion);
+
+                Window1 resumen = new Window1(titulo, texto, direccion);
+                resumen.Show();
+
+                //System.Diagnostics.Trace.WriteLine(medicamentoNombre.Text);
+                //System.Diagnostics.Trace.WriteLine(getTipoMedicamento());
+                //System.Diagnostics.Trace.WriteLine(medicamentoCantidad.Text);
+                //System.Diagnostics.Trace.WriteLine(getDistribuidor());
+                //System.Diagnostics.Trace.WriteLine(getDestino());
             }
         }
         
@@ -55,6 +73,12 @@ namespace FarmaciaNetCSharp
             
             if (resultado && !IsAlphaNum(medicamentoNombre.Text)) {
                 medicamentoValidacion.Content = "Ingrese el nombre del medicamento correctamente";
+                resultado = false;
+            }
+
+            if (resultado && getTipoMedicamento() == "") {
+
+                medicamentoValidacion.Content = "Seleccione el tipo de medicamento";
                 resultado = false;
             }
           
@@ -160,6 +184,54 @@ namespace FarmaciaNetCSharp
             }
 
             return false;
+        }
+
+        private string getTipoMedicamento() {
+            string response = "";
+
+            if (medicamentoTipo.SelectedIndex >-1) { 
+                response = medicamentoTipo.SelectedValue.ToString();
+            }
+            return response;
+        }
+        private string getDistribuidor() {
+            string response = "";
+
+            if ((bool)medicamentoDistribuidor1.IsChecked)
+            {
+                return medicamentoDistribuidor1.Content.ToString();
+            }
+
+            if ((bool)medicamentoDistribuidor2.IsChecked)
+            {
+                return medicamentoDistribuidor2.Content.ToString(); ;
+            }
+
+            if ((bool)medicamentoDistribuidor3.IsChecked)
+            {
+                return medicamentoDistribuidor3.Content.ToString(); ;
+            }
+            return response;
+        }
+
+        private string getDestino() {
+            string response = "";
+
+            if ((bool)medicamentoEntregaPrincipal.IsChecked)
+            {
+                response = response + "para la farmacia situada en Calle de la Rosa n.28";
+            }
+
+            if ((bool)medicamentoEntregaSecundaria.IsChecked)
+            {
+                if (response != ""){
+                    response = response + " y ";
+                }
+
+                response = response + "para la farmacia situada en Calle Alcazabilla n.3";
+            }
+
+            return response;
         }
         
 

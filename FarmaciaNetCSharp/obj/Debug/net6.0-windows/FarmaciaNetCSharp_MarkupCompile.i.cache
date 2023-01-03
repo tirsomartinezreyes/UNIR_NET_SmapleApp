@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\Tirso\source\repos\UNIR_NET_SmapleApp\FarmaciaNetCSharp\App.xaml
-11407045341
+21940794329
 
-5-917966590
+611373122
 194-1797456590
-MainWindow.xaml;
+MainWindow.xaml;Window1.xaml;
 
-False
+True
 
